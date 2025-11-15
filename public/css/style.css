@@ -1,0 +1,179 @@
+/* Reset básico */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #e4ecf7;
+    color: #333;
+}
+
+/* Contenedor principal */
+.contenedor-consulta {
+    max-width: 1000px;
+    margin: 30px auto;
+    background: #ffffff;
+    border: 1px solid #b5c7e0;
+    border-radius: 4px;
+    padding: 20px 25px 30px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Título */
+.contenedor-consulta h1 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #1f3b70;
+}
+
+/* Pestañas superiores simuladas */
+.tabs {
+    display: flex;
+    border-bottom: 1px solid #c0c0c0;
+    margin-bottom: 20px;
+}
+
+.tab {
+    padding: 8px 16px;
+    border: 1px solid #c0c0c0;
+    border-bottom: none;
+    background: #f2f2f2;
+    margin-right: 4px;
+    font-size: 13px;
+    cursor: default;
+}
+
+.tab.activa {
+    background: #ffffff;
+    font-weight: bold;
+}
+
+/* Formulario de consulta */
+.form-consulta {
+    background: #f5f7fb;
+    border: 1px solid #d0d7e6;
+    padding: 15px 20px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.fila-filtro {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.fila-filtro label {
+    width: 150px;
+    font-size: 13px;
+    color: #333;
+}
+
+.fila-filtro select {
+    flex: 1;
+    padding: 6px 8px;
+    font-size: 13px;
+    border: 1px solid #b5c7e0;
+    border-radius: 3px;
+    background-color: #ffffff;
+}
+
+.fila-filtro button {
+    margin-left: 150px;
+    padding: 7px 20px;
+    font-size: 13px;
+    border-radius: 3px;
+    border: 1px solid #1f5fbf;
+    background: linear-gradient(#4f8fe5, #2f6ec4);
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.fila-filtro button:hover {
+    background: linear-gradient(#5a9af0, #376fc2);
+}
+
+/* Encabezado listado */
+.contenedor-consulta h2 {
+    font-size: 16px;
+    margin: 10px 0;
+    color: #1f3b70;
+}
+
+/* Tabla de vehículos */
+.tabla-vehiculos {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 13px;
+}
+
+.tabla-vehiculos thead {
+    background: #dde6f5;
+}
+
+.tabla-vehiculos th,
+.tabla-vehiculos td {
+    border: 1px solid #c4d0ea;
+    padding: 6px 8px;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.tabla-vehiculos th {
+    font-weight: bold;
+}
+
+.tabla-vehiculos tbody tr:nth-child(even) {
+    background: #f7f9fc;
+}
+
+.tabla-vehiculos tbody tr:hover {
+    background: #e5f1ff;
+}
+
+/* Enlace de detalle */
+.tabla-vehiculos a {
+    color: #1f5fbf;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tabla-vehiculos a:hover {
+    text-decoration: underline;
+}
+
+/* Mensaje sin resultados */
+.contenedor-consulta p {
+    margin-top: 10px;
+    font-size: 13px;
+}
+
+/* Pequeña adaptación responsiva */
+@media (max-width: 768px) {
+    .contenedor-consulta {
+        margin: 10px;
+        padding: 15px;
+    }
+
+    .fila-filtro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .fila-filtro label {
+        width: 100%;
+        margin-bottom: 4px;
+    }
+
+    .fila-filtro button {
+        margin-left: 0;
+        margin-top: 8px;
+    }
+
+    .tabla-vehiculos {
+        font-size: 12px;
+    }}
+

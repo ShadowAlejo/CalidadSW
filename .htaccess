@@ -1,0 +1,19 @@
+# .htaccess en la raíz del proyecto (junto a /app y /public)
+
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+
+    # Ruta base (ajusta si tu proyecto no está en la raíz del dominio)
+    RewriteBase /
+
+    # No reescribir si ya se está apuntando a /public
+    RewriteRule ^public/ - [L]
+
+    # Si el recurso existe dentro de /public (css, js, img, etc.), servirlo directamente
+    RewriteCond %{DOCUMENT_ROOT}/public/$1 -f [OR]
+    RewriteCond %{DOCUMENT_ROOT}/public/$1 -d
+    RewriteRule ^(.+)$ public/$1 [L]
+
+    # Para todo lo demás, enviar a public/index.php y pasar la ruta como ?url=
+    RewriteRule ^(.*)$ public/index.php?url=$1 [L,QSA]
+</IfModule>
